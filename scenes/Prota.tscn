@@ -1,6 +1,5 @@
-[gd_scene load_steps=37 format=3 uid="uid://b6jygqs7gkelh"]
+[gd_scene load_steps=36 format=3 uid="uid://b6jygqs7gkelh"]
 
-[ext_resource type="Script" path="res://scenes/character.gd" id="1_tgnmt"]
 [ext_resource type="Texture2D" uid="uid://c6arvh1qnqe04" path="res://art/player/Prota Back animation-Sheet.png" id="2_lpoml"]
 [ext_resource type="Texture2D" uid="uid://bnwjh05p8l0n0" path="res://art/player/Prota Front animation-Sheet.png" id="3_h3tx1"]
 [ext_resource type="Texture2D" uid="uid://u6f6jbke2b0r" path="res://art/player/Prota Idle animation -Sheet.png" id="4_xc1fw"]
@@ -126,7 +125,7 @@ region = Rect2(288, 0, 48, 43)
 atlas = ExtResource("5_d34un")
 region = Rect2(336, 0, 48, 43)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6bh3s"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_opyra"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -239,12 +238,12 @@ animations = [{
 "speed": 11.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_tgnmt")
+[node name="Prota" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(309.5, 159.25)
 scale = Vector2(2.5625, 2.52326)
-sprite_frames = SubResource("SpriteFrames_6bh3s")
+sprite_frames = SubResource("SpriteFrames_opyra")
 animation = &"Idle"
-frame_progress = 0.88057
