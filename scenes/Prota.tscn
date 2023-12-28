@@ -246,4 +246,4 @@ animations = [{
 position = Vector2(309.5, 159.25)
 scale = Vector2(2.5625, 2.52326)
 sprite_frames = SubResource("SpriteFrames_opyra")
-animation = &"Idle"
+animation = &"walk"
