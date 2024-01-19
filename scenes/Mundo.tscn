@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dg4nrea7ptvi8"]
+[gd_scene load_steps=3 format=3 uid="uid://dg4nrea7ptvi8"]
+
+[ext_resource type="PackedScene" uid="uid://be2usvcwlj6eh" path="res://scenes/mapa.tscn" id="1_syf80"]
+[ext_resource type="PackedScene" uid="uid://bgn6bc5osvcq" path="res://scenes/Prota.tscn" id="2_sfpwa"]
 
 [node name="Mundo" type="Node2D"]
+
+[node name="Mapa" parent="." instance=ExtResource("1_syf80")]
+
+[node name="Prota" parent="." instance=ExtResource("2_sfpwa")]
