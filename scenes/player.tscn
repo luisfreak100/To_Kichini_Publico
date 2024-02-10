@@ -293,7 +293,7 @@ height = 20.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
-position = Vector2(-16, 6)
+position = Vector2(0, -1)
 script = ExtResource("1_qj3ao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -302,12 +302,14 @@ scale = Vector2(0.583333, 0.575581)
 sprite_frames = SubResource("SpriteFrames_s7j6k")
 animation = &"Idle"
 frame_progress = 0.0487937
+offset = Vector2(-142.475, -100)
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
-position = Vector2(5.14285, 3.12727)
+position = Vector2(-144, -99.6819)
 scale = Vector2(1.71429, 1.56364)
 zoom = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(84, 60)
+y_sort_enabled = true
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_w8y00")
