@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
+<<<<<<< Updated upstream
 const speed = 500
+=======
+const speed = 300
+>>>>>>> Stashed changes
 var current_dir = "none"
 
 func _ready():
@@ -67,6 +71,3 @@ func player_anim(movement):
 		elif movement == 0:
 			anim.play("Idle")
 		
-		
-	
-	

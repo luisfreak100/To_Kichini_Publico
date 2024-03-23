@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bl6f284557ojk"]
+[gd_scene load_steps=46 format=3 uid="uid://bl6f284557ojk"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_qj3ao"]
 [ext_resource type="Texture2D" uid="uid://cf0gcof3rjc2s" path="res://Sprites/Prota Idle animation -Sheet.png" id="2_l37pp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dm204qavwxwxh" path="res://Sprites/Prota Back animation-Sheet.png" id="4_wkbif"]
 [ext_resource type="Texture2D" uid="uid://v7uxdjkf2r6h" path="res://Sprites/Prota Front animation-Sheet.png" id="5_la83b"]
 [ext_resource type="Texture2D" uid="uid://1107hg2pjw4a" path="res://Sprites/Prota run animation-Sheet.png" id="6_pxv2r"]
+[ext_resource type="Script" path="res://scenes/arco.gd" id="7_nec4p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4hcp"]
 atlas = ExtResource("2_l37pp")
@@ -294,6 +295,7 @@ height = 20.0
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 position = Vector2(0, -1)
+collision_mask = 3
 script = ExtResource("1_qj3ao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -304,12 +306,15 @@ animation = &"Idle"
 frame_progress = 0.0487937
 offset = Vector2(-142.475, -100)
 
-[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
-position = Vector2(-144, -99.6819)
-scale = Vector2(1.71429, 1.56364)
-zoom = Vector2(4, 4)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_w8y00")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(4.57764e-05, -7.62939e-06)
+scale = Vector2(1, 0.900001)
+zoom = Vector2(3, 3)
+
+[node name="Arco" type="Node2D" parent="."]
+script = ExtResource("7_nec4p")
